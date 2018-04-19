@@ -1,0 +1,62 @@
+<aside class="main-sidebar" style="border-right: 1px solid #d1d8dd;position: fixed;    z-index: 11111; padding-top: 0; margin-top: 51px; ">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar row">
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <div class="zm_apps">
+            <ul class="zmApps" >
+                <li class="sel" onclick="change_menu(this)" id="crm">
+                    <i class=" menu_icon fa fa-line-chart"></i>
+                    <span class="lAppLbl">CRM</span>
+                </li>
+                <li onclick="change_menu(this)" id="education">
+                    <i class=" menu_icon fa fa-calendar-o"></i>
+                    <span class="lAppLbl">Education</span>
+                </li>
+                <li onclick="change_menu(this)" id="account">
+                    <i class=" menu_icon fa fa-file-text-o"></i>
+                    <span class="lAppLbl">Accouts</span>
+                </li>
+                <li onclick="change_menu(this)">
+                    <i class=" menu_icon fa fa-users"></i>
+                    <span class="lAppLbl">HR</span>
+                </li>
+                <li onclick="change_menu(this)">
+                    <i class=" menu_icon fa fa-money"></i>
+                    <span class="lAppLbl">Assests</span>
+                </li>
+                <li onclick="change_menu(this)">
+                    <i class=" menu_icon fa fa-wrench"></i>
+                    <span class="lAppLbl">Intergration</span>
+                </li>
+            </ul>
+        </div>
+        <ul class="nav nav-tabs SCl SC_show" style="display: block !important;    border-left: 1px solid #dddddd;">
+            <li class="active">
+                <a data-toggle="tab" href="#_menu11" style="border-radius: 0;">Menu</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#_menu22" style="border-radius: 0;">Filters</a>
+            </li>
+            <li>
+            </li>
+        </ul>
+        <ul class="sidebar-menu SCl SC_show " id="menu123" style="    top: 50px;">
+            <div class="tab-content">
+                <div id="_menu11" class="tab-pane fade in active" style="">
+                    <div class="menu_result">
+                        {{frappe.render_template("menu_list",{menuitems:menuitems})}}
+                    </div>
+                </div>
+                <div id="_menu22" class="tab-pane fade ">
+                    <div class="filter_list" style="padding: 0px">
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- <li class="header" x`>WELCOME ADMIN </li> -->
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
+<div class="overlay">
+    <div>
